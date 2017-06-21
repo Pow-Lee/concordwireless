@@ -1,16 +1,12 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="text-center">Concord Wireless Repairs</h1>
+<?php
+require_once 'models/repairModels.php';
+
+$repairs = getAllRepairs();
+
+?>
+
+<?php include_once 'includes/header.php'; ?>
+
 
       <div id="" class="text-center">
         <form class="" action="#" method="post">
@@ -27,17 +23,31 @@
               <th>Phone Number</th>
               <th>Date Added</th>
               <th>Date Updated</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
-
+            <?php
+              foreach ($repairs as $repair) {
+                echo '<tr>';
+                echo '<td>' . $repair['first_name'] . ' ' . $repair['last_name'] . '</td>';
+                echo '<td>' . $repair['phone_number'] . '</td>';
+                echo '<td>' . $repair['created_at'] . '</td>';
+                echo '<td>' . $repair['updated_at'] . '</td>';
+                echo '<td width=300>';
+                echo '<a class="btn btn-info" href="#">Read</a>';
+                echo ' ';
+                echo '<a class="btn btn-success" href="#">Update</a>';
+                echo ' ';
+                echo '<a class="btn btn-danger" href="#">Delete</a>';
+                echo '</td>';
+                echo '</tr>';
+              }
+             ?>
           </tbody>
     </table>
       </div><!-- End of Repair Table DIV -->
 
-      <footer class="footer">
-        <h6 class="text-center">Concord Wireless Repairs</h6>
-      </footer>
-    </div><!-- End of Container DIV -->
-  </body>
-</html>
+
+
+    <?php include_once 'includes/footer.php'; ?>
