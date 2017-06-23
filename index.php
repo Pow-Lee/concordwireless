@@ -35,11 +35,11 @@ $repairs = getAllRepairs();
                 echo '<td>' . $repair['created_at'] . '</td>';
                 echo '<td>' . $repair['updated_at'] . '</td>';
                 echo '<td width=300>';
-                echo '<a class="btn btn-info" href="#">Read</a>';
+                echo '<a class="btn btn-info" href="readRepair.php?id='.$repair['id'].'">Read</a>';
                 echo ' ';
-                echo '<a class="btn btn-success" href="#">Update</a>';
+                echo '<a class="btn btn-success" href="editRepair.php?id='.$repair['id'].'">Update</a>';
                 echo ' ';
-                echo '<a class="btn btn-danger" href="#">Delete</a>';
+                echo '<a class="btn btn-danger" href="deleteRepair.php?id='.$repair['id'].'">Delete</a>';
                 echo '</td>';
                 echo '</tr>';
               }
