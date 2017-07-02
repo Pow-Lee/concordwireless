@@ -35,7 +35,7 @@ $repairs = getAllRepairs();
                 echo '<td>' . $repair['created_at'] . '</td>';
                 echo '<td>' . $repair['updated_at'] . '</td>';
                 echo '<td width=300>';
-                echo '<a class="btn btn-info" href="readRepair.php?id='.$repair['id'].'">Read</a>';
+                echo '<a class="btn btn-info" href="showRepair.php?id='.$repair['id'].'">Show</a>';
                 echo ' ';
                 echo '<a class="btn btn-success" href="editRepair.php?id='.$repair['id'].'">Update</a>';
                 echo ' ';
