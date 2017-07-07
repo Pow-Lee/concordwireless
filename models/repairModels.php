@@ -1,6 +1,6 @@
 <?php
 function openDatabaseConnection() {
-  $link = new PDO("mysql:host=localhost; dbname=simplephpcrud", 'root', 'root');
+  $link = new PDO("mysql:host=localhost; dbname=test", 'root', '');
   return $link;
 }
 

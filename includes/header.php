@@ -11,6 +11,10 @@
   <body>
     <nav class="navbar navbar-default navbar-fixed-top">
       <h1 class="text-center">Concord Wireless Repairs</h1>
+      <ul class="list-inline text-center">
+        <li class="list-inline-item"><a href="index.php">Home</a></li>
+        <li class="list-inline-item"><a href="addRepair">Add Repair</a></li>
+      </ul>
     </nav>
     <div class="container">
 
